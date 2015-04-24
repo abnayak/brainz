@@ -4,31 +4,35 @@
 using namespace std;
 
 int main(){
-	int prices[6] = {10, 22, 5, 75, 65, 80};
-	int pos;
-	int profit = 0;
-	int profit1 = 0;
-	int min1 = prices[0];
-	for(int i = 2; i < 6; i++){
-		if ( prices[i] < min1){
-			min1 = prices[i];
-			pos = i;
-		}else if ( prices[i] - min1 > profit){
-			profit = prices[i] - min1;
+	const int arraySize = 7;
+	int prices[arraySize] = {2, 30, 15, 10, 8, 25, 80};
+	int maxProfits[arraySize];
+	int curBuyingPrice[arraySize];
+	int maxProfit = 0;
+	int buyingPrice=prices[0];
+	maxProfits[0] = 0;
+
+	for(int i = 1 ; i < arraySize ; i++){
+		if (buyingPrice > prices[i]){
+			buyingPrice = prices[i];
+		}else if ((prices[i] - buyingPrice) > maxProfit){
+			maxProfit = prices[i] - buyingPrice;
+		}
+		maxProfits[i] = maxProfit;
+		curBuyingPrice[i] = buyingPrice;
+	}
+	maxProfit = 0 ;
+	int totalProfit = 0;
+	for (int i = 0 ; i < arraySize ; i++){
+		cout << maxProfits[i] << ", ";
+	}
+	cout << endl;
+	
+	for(int i=1 ; i < arraySize ; i++){
+		if ( maxProfit < maxProfits[i]){
+			maxProfit = maxProfits[i];
+			totalProfit = maxProfit + maxProfits[i-1];
 		}
 	}
-	profit1 = profit;
-	profit = 0;
-	if ( pos >= 3 ){
-		min1 = prices[0];
-		for(int i = 2; i < pos; i++){
-			if (prices[i] < min1){
-				min1 = prices[i];
-			}else if (prices[i] - min1 > profit){
-				profit = prices[i] - min1;
-			}
-		}
-	}
-	cout << "total profit: " << profit + profit1 << endl;
-	return 0;
+	cout << totalProfit << endl;
 }
