@@ -11,7 +11,7 @@ int Solution::searchMatrix(vector<vector<int> > &A, int B) {
     for (int i = 0, j=0; i < rowLen && j < columnlen; ) {
         if (A[i][j] == B)
           return 1;
-        if(A[i][columnlen-1] <= B) {
+        if(B <= A[i][columnlen-1]) {
           j++;
         } else {
           i++;
