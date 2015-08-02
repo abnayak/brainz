@@ -5,7 +5,7 @@
 using namespace std;
 
 int Solution::uniquePaths(int A, int B) {
-
+  
 }
 
 int main() {
