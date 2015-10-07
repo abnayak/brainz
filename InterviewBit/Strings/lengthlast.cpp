@@ -7,7 +7,7 @@ using namespace std;
 int lengthOfLastWord(const string &A) {
     string lastWord = "";
 
-    for (int i=0;i < A.size();) {
+    for (auto i=0; i < A.size(); ) {
       if (A[i] == ' ') {
         i++;
       }
@@ -19,8 +19,6 @@ int lengthOfLastWord(const string &A) {
     }
     return lastWord.size();
 }
-
-
 
 int main() {
   cout << lengthOfLastWord("") << endl;
