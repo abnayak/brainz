@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -6,7 +7,7 @@ int main(int argc, char const *argv[])
 {
 	int a ,b,c,d;
 
-	for ( a = 0; a < 2; ++a)	{
+	for (a = 0; a < 2; ++a)	{
 		for ( b = 0 ; b < 2; b++)	{
 			c = 2-a;
 			d = 2-b;
@@ -14,5 +15,6 @@ int main(int argc, char const *argv[])
 				cout << "( " << b << "," << d << ")" << "( " << a << "," << b << ")" << endl;
 		}
 	}
+	vector<int> vec;
 	return 0;
 }
