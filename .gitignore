@@ -26,3 +26,11 @@
 *.exe
 *.out
 *.app
+
+
+## Intellij ignore files
+*.iml
+
+## Directory-based project format:
+.idea/
+/out/
