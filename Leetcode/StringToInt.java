@@ -1,4 +1,4 @@
-class string_to_int {
+class StringToInt {
 	public static int myAtoi(String str) {
         boolean negative  = false;
 
@@ -13,7 +13,7 @@ class string_to_int {
 		for (int i = 0 ; i < str.length() ; i++) {
 			int tenpower  = (str.charAt(i) - '0') * (int)Math.pow(10, pow-i);
 			result += tenpower;
-		}        
+		}
 
 		if (negative) {
 			result *= -1;
