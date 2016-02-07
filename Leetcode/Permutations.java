@@ -11,7 +11,6 @@
  */
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Permutations {
@@ -23,11 +22,6 @@ public class Permutations {
             public Pair(Integer value, Integer count) {
                 this.value = value;
                 this.count = count;
-            }
-
-            public Pair(Pair pair) {
-                this.value = pair.value;
-                this.count = pair.count;
             }
 
             public Integer value;
@@ -48,36 +42,40 @@ public class Permutations {
                 }
             }
             permuteHelper(numberFrequency, result, 0);
-            return null;
+            return permutations;
         }
 
         private void permuteHelper(List<Pair> numberFrequency, int[] result, int index) {
+            if (index == result.length) {
+                List<Integer> newSolution = new ArrayList<>();
+                for (int i : result) {
+                    newSolution.add(i);
+                }
+                permutations.add(newSolution);
+            }
             for(int i = 0; i < numberFrequency.size(); i++) {
-
                 if(numberFrequency.get(i).count != 0) {
-                    result[index] = pair.value;
-
-                    List<Pair> newFrequency = new ArrayList<>(numberFrequency.size());
-                    for(Pair p: numberFrequency) {
-                        newFrequency.add(new Pair(p.value, p.count));
-                    }
-
-                    newFrequency.get(i).count -= 1;
-
-                    permuteHelper(newFrequency, result, index+1);
+                    result[index] = numberFrequency.get(i).value;
+                    numberFrequency.get(i).count--;
+                    permuteHelper(numberFrequency, result, index + 1);
+                    numberFrequency.get(i).count++;
                 }
             }
-            for(int i : result) {
-                System.out.print(i);
-            }
-            System.out.println("");
+
         }
-}
+    }
 
 
     public static void main (String[] args) {
         int[] numbers = {1,2,2,3,3};
         Solution solution = new Solution();
-        solution.permute(numbers);
+        List<List<Integer>> permutations = solution.permute(numbers);
+
+        for (int i = 0; i < permutations.size(); i++) {
+            for (int j = 0; j < permutations.get(i).size(); j++) {
+                System.out.print(permutations.get(i).get(j));
+            }
+            System.out.println("");
+        }
     }
 }
