@@ -17,7 +17,7 @@ public class MaximumProductSubarray {
             for(int index = 1; index < nums.length; index++) {
                 int tempPreviousMax = previousMax;
                 previousMax = Math.max(Math.max(previousMax*nums[index], nums[index]), previousMin*nums[index]);
-                previousMin = Math.min(Math.min(tempPreviousMax*nums[index], nums[index]), nums[index]*previousMin);
+                previousMin = Math.min(Math.min(tempPreviousMax*nums[index], nums[index]), previousMin*nums[index]);
                 if(previousMax > globalMax) {
                     globalMax = previousMax;
                 }
