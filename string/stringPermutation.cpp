@@ -3,13 +3,12 @@
 
 using namespace std;
 
-
 void printPermutation(char *str, int begin , int end){
-	if ( begin == end)
+	if (begin == end)
 		cout << str << endl;
 	else{
 		for (int i = begin; i <= end; ++i){
-			if ( begin != i && str[begin] == str[i])
+			if (begin != i && str[begin] == str[i])
 				continue;
 
 			swap(str[begin],str[i]);
