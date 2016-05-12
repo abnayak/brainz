@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-/**
- * Created by abhijeen on 1/21/16.
- */
-public class beads {
-=======
+package src;
 /*
 ID: bapuni1
 LANG: JAVA
@@ -17,5 +12,4 @@ public class beads {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(new File("beads.in"));
     }
->>>>>>> Fixed string permutation problem
 }

@@ -1,3 +1,7 @@
+package DynamicProgramming;
+
+import java.util.Arrays;
+
 /**
  * http://www.geeksforgeeks.org/dynamic-programming-subset-sum-problem/
  */

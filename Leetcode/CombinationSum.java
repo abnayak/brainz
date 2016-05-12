@@ -14,6 +14,7 @@ A solution set is:
 */
 
 import java.util.*;
+import java.util.LinkedList;
 
 public class CombinationSum {
     public static void main(String[] args) {
@@ -59,7 +60,6 @@ public class CombinationSum {
 
                 helper(candidates, target, index+1, list);
             }
-
         }
     }
 }

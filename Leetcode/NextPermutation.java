@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 /**
@@ -17,9 +18,9 @@ import java.util.Collections;
 public class NextPermutation {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] array = {1,1,5};
+        Integer[] array = {1,1,5};
 
-        solution.nextPermutation(array);
+        solution.nextPermutation(new ArrayList<Integer>(Arrays.asList(array)));
 
         for(int i : array) {
             System.out.print(i);
