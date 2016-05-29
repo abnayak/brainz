@@ -1,4 +1,4 @@
-package String;
+package Strings;
 
 /**
  * Created by abhijeet on 3/16/16.

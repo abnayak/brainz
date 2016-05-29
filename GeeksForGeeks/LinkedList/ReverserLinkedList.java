@@ -1,3 +1,7 @@
+package LinkedList;
+
+import LinkedList.LinkedList;
+
 /**
  * Created by abhijeen on 1/18/16.
  */

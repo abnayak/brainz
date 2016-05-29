@@ -1,4 +1,4 @@
-package String;
+package Strings;
 
 import java.util.Stack;
 
