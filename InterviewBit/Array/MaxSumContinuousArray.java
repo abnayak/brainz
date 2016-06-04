@@ -22,12 +22,11 @@ public class MaxSumContinuousArray {
             buffer[0] = a.get(0);
 
             for (int i = 1; i < a.size(); i++) {
-                if(buffer[i-1] < buffer[i-1] + a.get(i)) {
-                    buffer[i] = buffer[i-1] + a.get(i);
-                } else if(buffer[i-1] + a.get(i) > a.get(i)){
-                    buffer[i] = a.get(i) + buffer[i-1];
-                } else {
+                int tempSum = buffer[i-1] + a.get(i);
+                if(tempSum < a.get(i)) {
                     buffer[i] = a.get(i);
+                } else {
+                    buffer[i] = tempSum;
                 }
             }
 
@@ -40,5 +39,4 @@ public class MaxSumContinuousArray {
             return max;
         }
     }
-
 }
