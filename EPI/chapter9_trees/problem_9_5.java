@@ -61,21 +61,26 @@ public class problem_9_5 {
                 current = current.parent;
             }
 
+            // Only go to the left node
+            // 1. previous node is not left node
+            // 2. previous node is not right node
             if (current.left != null && current.right != previous && current.left != previous) {
                 current = current.left;
-            } else if (previous == current.left) {
+            } else if (previous == current.left) { // If previous node left node, that means we are at the root node,
+                // print the root and go to the right node if exists, otherwise go up in the tree
                 System.out.printf("%d, ", current.value);
                 if (current.right != null) {
                     current = current.right;
+                } else {
+                    previous = current;
+                    current = current.parent;
                 }
-            } else if(previous == current.right) {
+            } else if(previous == current.right) { // If previous node is right node, then we processed the root, move up the tree
                 previous = current;
                 current = current.parent;
             }
         }
-
     }
-
 
     public static class Node {
         public int value;
