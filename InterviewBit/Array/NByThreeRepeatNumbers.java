@@ -107,7 +107,7 @@ public class NByThreeRepeatNumbers {
                 }
             }
 
-            
+
             // Do the actual counting of the keys
             for (Integer key : slot.keySet()) {
                 int count = 0;
