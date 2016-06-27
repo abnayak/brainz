@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by abhijeet on 6/12/2016.
@@ -9,23 +6,34 @@ import java.util.Set;
 public class DiffK {
 
     public static void main (String[] args) {
-
+        Solution solution = new Solution();
+        Integer[] array = new Integer[] {1,3,5};
+        System.out.printf("Is Solution present: " + solution.diffPossible(new ArrayList<>(Arrays.asList(array)), 4));
     }
 
-    public class Solution {
+    public static class Solution {
         public int diffPossible (ArrayList<Integer> a, int b) {
-            int solution = 0;
-            int diff = a.get(a.size()-1) - a.get(0);
-            if( diff < b ) {
-                return solution;
+            if(a == null || a.size() < 2) {
+                return 0;
             }
 
-            Set<Integer> set = new HashSet<>();
+            int begin = 0;
+            int end = 1;
 
-            for(int i : a) {
-
+            while(begin < end && end < a.size()) {
+                int diff = a.get(end) - a.get(begin);
+                if(diff > b) {
+                    begin++;
+                    // If both begin and end are equal, then move both of the indexes
+                    if(end == begin)
+                        end++;
+                } else if (diff < b) {
+                    end++;
+                } else {
+                    return 1;
+                }
             }
-
+            return 0;
         }
     }
 
