@@ -35,3 +35,4 @@
 ## Directory-based project format:
 .idea/
 /out/
+/output/
