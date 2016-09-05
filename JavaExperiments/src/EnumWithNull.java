@@ -11,7 +11,7 @@ public class EnumWithNull {
 
         String color;
 
-        public colors(String color) {
+        colors(String color) {
             this.color = color;
         }
     }
