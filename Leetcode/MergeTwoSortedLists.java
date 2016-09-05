@@ -2,10 +2,14 @@ import java.util.PriorityQueue;
 
 /**
  * Created by abhijeet on 8/31/16.
- * https://leetcode.com/submissions/detail/72402132/
+ * https://leetcode.com/problems/merge-two-sorted-lists/
+ *
+ * Merge two sorted lists
  */
-public class MergeKSortedLists {
+
+public class MergeTwoSortedLists {
     public static void main(String[] args) {
+
     }
 
     public class ListNode {
@@ -25,10 +29,13 @@ public class MergeKSortedLists {
             }
         }
 
-        public ListNode mergeKLists(ListNode[] lists) {
+        public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
             PriorityQueue<ListNode> priorityQueue = new PriorityQueue<>(new Comparator());
             ListNode solution = null;
             ListNode back = null;
+            ListNode[] lists = new ListNode[2];
+            lists[0] = l1;
+            lists[1] = l2;
 
             for (ListNode listNode : lists) {
                 if (listNode != null)

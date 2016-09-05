@@ -8,7 +8,7 @@ public class GenerateParentheses {
     public static void main(String[] args) {
         Solution solution = new Solution();
         List<String> result = solution.generateParenthesis(0);
-        for(String str : result) {
+        for (String str : result) {
             System.out.println(str);
         }
     }
