@@ -66,7 +66,6 @@ public class SubstringWithConcatenation {
                 // If they match then we have a solution, otherwise skip
                 if (j == words.length) result.add(i);
             }
-
             return result;
         }
     }
