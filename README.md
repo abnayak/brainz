@@ -23,6 +23,7 @@ Java Generics
 2. Implement Heap data structure.
 3. [Difference](http://stackoverflow.com/questions/40471/differences-between-hashmap-and-hashtable) between HashTable and HashMap. 
 4. Concrete [implementation](https://docs.oracle.com/javase/tutorial/collections/implementations/index.html) of interface collections.
+5. Read the [Collections](https://docs.oracle.com/javase/7/docs/api/java/util/Collections.html) APIs.
  
 C++ Pair equivalent in Java
 ===========================
@@ -37,4 +38,3 @@ Finding length/size of various Collection objects
 1. Array: array.length
 2. String: string.length()
 3. Collection object(Stack, Queue, List): object.size()
-
