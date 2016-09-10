@@ -38,3 +38,8 @@ Finding length/size of various Collection objects
 1. Array: array.length
 2. String: string.length()
 3. Collection object(Stack, Queue, List): object.size()
+
+String and character
+====================
+* Convert a integer to character
+    Character.forDigit(int_value, 10);
