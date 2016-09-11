@@ -43,3 +43,7 @@ String and character
 ====================
 * Convert a integer to character
     Character.forDigit(int_value, 10);
+    
+Reference examples
+==================
+1. [Combination Sum](https://discuss.leetcode.com/topic/44037/combination-sum-i-ii-and-iii-java-solution-see-the-similarities-yourself)
