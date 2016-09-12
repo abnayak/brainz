@@ -8,7 +8,9 @@ Brainz (Programming puzzle, Common algorithms repository)
 Important Java methods and techniques to solve problems faster
 ==============================================================
 1. Fill an array with a single value
+    ```java
     Arrays.fill(intArray,1);
+    ```
 
 2. Convert an array to Linked list
 
@@ -42,9 +44,11 @@ Finding length/size of various Collection objects
 String and character
 ====================
 * Convert a integer to character
+    ```java
     Character.forDigit(int_value, 10);
+    ```
     
 Reference examples
 ==================
-1. [Combination Sum](https://discuss.leetcode.com/topic/44037/combination-sum-i-ii-and-iii-java-solution-see-the-similarities-yourself)
-2. [Search In Rotated Array]()
+1. [Combination sum](https://discuss.leetcode.com/topic/44037/combination-sum-i-ii-and-iii-java-solution-see-the-similarities-yourself)
+2. [Search an element in rotated array](https://github.com/abnayak/brainz/blob/master/Leetcode/SearchRotatedSortedArray.java)
