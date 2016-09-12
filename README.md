@@ -52,3 +52,7 @@ Reference examples
 ==================
 1. [Combination sum](https://discuss.leetcode.com/topic/44037/combination-sum-i-ii-and-iii-java-solution-see-the-similarities-yourself)
 2. [Search an element in rotated array](https://github.com/abnayak/brainz/blob/master/Leetcode/SearchRotatedSortedArray.java)
+
+String problems
+===============
+1. [Multiply to strings (only containing number) to generate a string][https://github.com/abnayak/brainz/blob/master/InterviewBit/Strings/MultiplyStrings.java]

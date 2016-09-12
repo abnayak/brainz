@@ -1,12 +1,13 @@
 /**
  * Created by abhijeet on 9/11/16.
+ * https://leetcode.com/problems/search-in-rotated-sorted-array/
  */
 public class SearchRotatedSortedArray {
     public static void main(String[] args) {
-        int[] mid = {3,4,5,6,1,2};
+        int[] mid = {3, 4, 5, 6, 1, 2};
 
         Solution solution = new Solution();
-        System.out.println(solution.search(mid, 4));
+        System.out.println(solution.search(mid, 3));
     }
 
     public static class Solution {
@@ -14,11 +15,11 @@ public class SearchRotatedSortedArray {
             int pivotPoint = searchMid(nums);
             System.out.println(pivotPoint);
 
-            // search on left tree
+            // Search the left side of the array
             int location = binarySearch(nums, target, 0, pivotPoint);
             if (location != -1) {
                 return location;
-            } else {
+            } else { // Search the right side of the array
                 return binarySearch(nums, target, pivotPoint + 1, nums.length - 1);
             }
         }
@@ -32,11 +33,11 @@ public class SearchRotatedSortedArray {
                 mid = (head + tail) / 2;
                 if (nums[mid] > nums[tail]) {
                     head = mid + 1;
-                }else {
+                } else {
                     tail = mid;
                 }
             }
-            return head-1;
+            return tail;
         }
 
         private int binarySearch(int[] nums, int target, int begin, int end) {

@@ -1,28 +1,9 @@
-package Strings;
-
-import java.util.Arrays;
-
 /**
- * Created by abhijeet on 3/21/16.
- * Given two numbers represented as strings, return multiplication of the numbers as a string.
-
- Note: The numbers can be arbitrarily large and are non-negative.
- Note2: Your answer should not have leading zeroes. For example, 00 is not a valid answer.
- For example,
- given strings "12", "10", your answer should be “120”.
-
- NOTE : DO NOT USE BIG INTEGER LIBRARIES ( WHICH ARE AVAILABLE IN JAVA / PYTHON ).
- We will retroactively disqualify such submissions and the submissions will incur penalties.
-
- https://www.interviewbit.com/problems/multiply-strings/
-
+ * Created by abhijeet on 9/11/16.
+ * https://leetcode.com/problems/multiply-strings/
  */
 public class MultiplyStrings {
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println("Solution: " + solution.multiply("99999", "99999"));
-    }
-    public static class Solution {
+    public class Solution {
         public String multiply(String a, String b) {
             if(a == null || b == null) {
                 return null;
@@ -54,8 +35,9 @@ public class MultiplyStrings {
                     }
                 }
             }
-            StringBuffer sb = new StringBuffer();
-            sb.le
+
+            if(solution.length() == 0) return "0";
+
             return solution.toString();
         }
     }
