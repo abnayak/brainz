@@ -1,3 +1,5 @@
+import java.util.Collections;
+
 /**
  * Created by abhijeet on 9/10/16.
  * https://leetcode.com/problems/first-missing-positive/
@@ -11,46 +13,26 @@
  */
 public class FindMissingPositive {
     public static void main(String[] args) {
-        int[] array = {9,8,6};
+        int[] array = {1};
         Solution solution = new Solution();
         System.out.println(solution.firstMissingPositive(array));
     }
 
     public static class Solution {
         public int firstMissingPositive(int[] nums) {
-
-            // If there are only negative numbers or zero then first positive number is one.
-            boolean onlyNegativeNumbs = true;
-            for (int i : nums) {
-                if (i > 0) {
-                    onlyNegativeNumbs = false;
-                    break;
-                }
-            }
-            if (onlyNegativeNumbs) return 1;
-
-            // Check if it's linearly increasing
-
-
-            // Find the minimum positive number
-            int min = Integer.MAX_VALUE;
-            for (int i : nums) {
-                if (i > 0 && i < min) min = i;
-            }
-            // Lower the min by 1 which we can subtract from the positive array numbers
-            min--;
-            int count = 0;
-            int actualSum = 0;
             for (int i = 0; i < nums.length; i++) {
-                if (nums[i] > 0) {
-                    actualSum += nums[i] - min;
-                    count++;
+                while(nums[i] > 0 && nums[i]-1 < nums.length && nums[nums[i]-1] != nums[i]) {
+                    int temp = nums[nums[i]-1];;
+                    nums[nums[i]-1] = nums[i];
+                    nums[i] = temp;
                 }
             }
-            count++;
-            // sum of count+1 elements as one is missing
-            int sum = (count * (count + 1)) / 2;
-            return (sum - actualSum) + min;
+            int i =0;
+            for (; i < nums.length; i++) {
+                if(nums[i] != i+1) break;
+            }
+
+            return i+1;
         }
     }
 }
