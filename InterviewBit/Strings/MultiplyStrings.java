@@ -54,8 +54,6 @@ public class MultiplyStrings {
                     }
                 }
             }
-            StringBuffer sb = new StringBuffer();
-            sb.le
             return solution.toString();
         }
     }

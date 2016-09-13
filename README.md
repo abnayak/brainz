@@ -47,7 +47,11 @@ String and character
     ```java
     Character.forDigit(int_value, 10);
     ```
-    
+* Convert a String to character array
+    ```java
+    string.toCharArray()
+    ```
+
 Reference examples
 ==================
 1. [Combination sum](https://discuss.leetcode.com/topic/44037/combination-sum-i-ii-and-iii-java-solution-see-the-similarities-yourself)
