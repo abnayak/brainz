@@ -60,3 +60,6 @@ Reference examples
 String problems
 ===============
 1. [Multiply to strings (only containing number) to generate a string][https://github.com/abnayak/brainz/blob/master/InterviewBit/Strings/MultiplyStrings.java]
+
+BackTrack
+=========
