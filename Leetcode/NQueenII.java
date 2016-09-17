@@ -1,26 +1,16 @@
-import java.util.ArrayList;
-import java.util.List;
-
 /**
- * Created by abhijeet on 9/13/16.
+ * Created by abhijeet on 9/16/16.
+ * https://leetcode.com/problems/n-queens-ii/
  */
-public class NQueenProblem {
+public class NQueenII {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        List<List<String>> result = solution.solveNQueens(4);
-        for (List<String> strs : result) {
-            for (String s : strs) {
-                System.out.println(s);
-            }
-
-            System.out.println("\n");
-        }
+        System.out.println(solution.totalNQueens(4));
     }
 
-    public class Solution {
-        List<List<String>> solution = new ArrayList<>();
-
-        public List<List<String>> solveNQueens(int n) {
+    public static class Solution {
+        int count = 0;
+        public int totalNQueens(int n) {
             char[][] board = new char[n][n];
             // initialize the board
             for (int i = 0; i < n; i++) {
@@ -31,16 +21,12 @@ public class NQueenProblem {
 
             solve(board, n, 0);
 
-            return solution;
+            return count;
         }
 
         private void solve(char[][] board, final int n, int row) {
             if (row >= n) {
-                List<String> rows = new ArrayList<>();
-                for (int i = 0; i < n; i++) {
-                    rows.add(new String(board[i]));
-                }
-                solution.add(rows);
+                count++;
                 return;
             }
 
