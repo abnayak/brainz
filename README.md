@@ -14,6 +14,13 @@ Important Java methods and techniques to solve problems faster
 
 2. Convert an array to Linked list
 
+Must know data structure in java
+================================
+1. List : ArrayList, LinkedList
+2. HashTable
+3. Stack
+4. Deque: ArrayDeque, ConcurrentLinkedDeque, LinkedBlockingDeque, LinkedList
+
 Iterating collection:
 =====================
 1. Iterate a HashMap

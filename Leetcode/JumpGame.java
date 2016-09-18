@@ -16,13 +16,26 @@ public class JumpGame {
             return solveV2(nums);
         }
 
+        /**
+         * Most efficient method to solve this problem.
+         * @param nums
+         * @return
+         */
+        public boolean solveV2(int[] nums) {
+            int maxReachable = nums[0];
+            for (int i = 1; i < nums.length; i++) {
+                if(maxReachable < i) return false;
+                maxReachable = Math.max(maxReachable, i+nums[i]);
+            }
+            return true;
+        }
 
         /**
          * Using extra space to cache the previous results
          * @param nums
          * @return
          */
-        public boolean solveV2(int[] nums) {
+        public boolean solveV1(int[] nums) {
             boolean[] array = new boolean[nums.length];
             Arrays.fill(array,false);
             array[nums.length-1] = true;
@@ -37,19 +50,6 @@ public class JumpGame {
                 }
             }
             return array[0];
-        }
-
-        public boolean solve(int[] nums, int index) {
-            if (index >= nums.length - 1) {
-                return true;
-            }
-
-            for (int i = nums[index]; i >= 1; i--) {
-                if (solve(nums, index + i)) {
-                    return true;
-                }
-            }
-            return false;
         }
     }
 }
