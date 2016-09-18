@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * Created by abhijeet on 9/16/16.
@@ -16,6 +15,7 @@ public class JumpGame {
         public boolean canJump(int[] nums) {
             return solveV2(nums);
         }
+
 
         /**
          * Using extra space to cache the previous results
