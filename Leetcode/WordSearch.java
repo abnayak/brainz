@@ -40,6 +40,7 @@ public class WordSearch {
 
             check[i][j] = 0;
 
+            return false;
         }
     }
 }
