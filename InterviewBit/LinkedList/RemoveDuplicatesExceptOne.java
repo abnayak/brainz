@@ -23,16 +23,6 @@ public class RemoveDuplicatesExceptOne {
         }
     }
 
-    static class ListNode {
-        public int val;
-        public ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
-
     public static class Solution {
         public ListNode deleteDuplicates(ListNode a) {
             if (a == null) return a;

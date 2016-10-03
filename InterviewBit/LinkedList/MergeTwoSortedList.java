@@ -7,17 +7,6 @@ import java.util.PriorityQueue;
  * Created by abhijeet on 9/30/16.
  */
 public class MergeTwoSortedList {
-
-    static class ListNode {
-        public int val;
-        public ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
-
     public class Solution {
         private class MyComparator implements Comparator<ListNode> {
             @Override

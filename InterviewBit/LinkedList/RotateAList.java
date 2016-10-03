@@ -4,16 +4,6 @@ package LinkedList;
  * Created by abhijeet on 10/1/16.
  */
 public class RotateAList {
-    static class ListNode {
-        public int val;
-        public ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
-
     public static class Solution {
         public ListNode rotateRight(ListNode a, int b) {
             java.util.Deque<ListNode> queue = new java.util.LinkedList<>();
@@ -26,7 +16,7 @@ public class RotateAList {
             b = b % queue.size();
             ListNode root = null;
             for (int i = 0; i < b; i++) {
-                if(root == null) {
+                if (root == null) {
                     root = queue.removeLast();
                     root.next = null;
                 } else {
@@ -36,12 +26,12 @@ public class RotateAList {
             }
 
             a = root;
-            while(root != null && root.next != null) {
+            while (root != null && root.next != null) {
                 root = root.next;
             }
 
-            while(!queue.isEmpty()) {
-                if(root == null) {
+            while (!queue.isEmpty()) {
+                if (root == null) {
                     root = queue.removeFirst();
                     root.next = null;
                 } else {
