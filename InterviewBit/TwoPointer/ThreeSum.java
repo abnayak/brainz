@@ -5,60 +5,35 @@ import java.util.Collections;
 import java.util.List;
 
 public class ThreeSum {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         Solution solution = new Solution();
-        Integer[] array = new Integer[]{ 5, -2, -1, -10, 10 };
+        Integer[] array = new Integer[]{-4, -8, -10, -9, -1, 1, -2, 0, -8, -2};
 
-        System.out.println(solution.threeSumClosest(Arrays.asList(array), 5));
+        System.out.println(solution.threeSumClosest(Arrays.asList(array), 0));
     }
 
     public static class Solution {
-        public int threeSumClosest (List<Integer> a, int b) {
+        public int threeSumClosest(List<Integer> a, int b) {
             Collections.sort(a);
 
-            int distance = Integer.MAX_VALUE;
-            int sum = 0;
-
-            int begin = 0;
-            int end = a.size() - 1;
-
-            while (begin < end) {
-                int partialSum = a.get(begin) + a.get(end);
-                int i = (begin+end)/2;
-                int p = begin+1;
-                int q = end-1;
-                while (p < q) {
-                    int tempDistance = Math.abs(b - (partialSum + a.get(i)));
-                    if (tempDistance < distance) {
-                        distance = tempDistance;
-                        sum = partialSum + a.get(i);
+            int low = 0;
+            int high = a.size() - 1;
+            int sum = a.get(0) + a.get(1) + a.get(3);
+            while (low < high - 1) {
+                for (int i = low + 1; i < high; i++) {
+                    int temp = a.get(low) + a.get(high) + a.get(i);
+                    if (temp == b) return b;
+                    if (Math.abs(temp - b) < Math.abs(sum - b)) {
+                        sum = temp;
                     }
-
-                    if (tempDistance > Math.abs(b-partialSum)) {
-                        q = i-1;
-                        i = (q+p)/2;
-                    } else if(tempDistance < Math.abs(b-partialSum)) {
-                        p = i+1;
-                        i = (p+q)/2;
-                    } else {
-                        break;
-                    }
-                    System.out.printf("%d %d %d\n",p, q, i);
                 }
-
-                if (partialSum > b) {
-                    end--;
-                } else if (partialSum < b) {
-                    begin++;
-                } else if (partialSum == b) {
-                    begin++;
-                    end--;
+                if (a.get(low) + a.get(high) < b) {
+                    low++;
+                } else {
+                    high--;
                 }
-
             }
             return sum;
         }
-
     }
-
 }
