@@ -14,10 +14,11 @@ public class RemoveDuplicates {
 
     public class Solution {
         public int removeElement(ArrayList<Integer> a, int b) {
-            Iterator<Integer.
+
             for (int i = 0; i < a.size(); ) {
 
             }
+            return 0;
         }
     }
 }

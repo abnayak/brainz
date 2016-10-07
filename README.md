@@ -3,7 +3,7 @@ Brainz (Programming puzzle, Common algorithms repository)
 1. ProjectEuler: Contains solutions for projecteuler.net puzzles.
 2. Leetcode: Solution to leetcode.com algorithm problems.
 3. InterviewBits: Solution to inteviewbits.com puzzles.
-4. sorting: C++ implementation of few simple sorting algorithms.
+4. Sorting: C++ implementation of few simple sorting algorithms.
 
 Important Java methods and techniques to solve problems faster
 ==============================================================
@@ -66,7 +66,11 @@ Reference examples
 
 String problems
 ===============
-1. [Multiply to strings (only containing number) to generate a string][https://github.com/abnayak/brainz/blob/master/InterviewBit/Strings/MultiplyStrings.java]
+1. [Multiply to strings (only containing number) to generate a string](https://github.com/abnayak/brainz/blob/master/InterviewBit/Strings/MultiplyStrings.java)
+
+Two Pointers
+============
+1. [Count the number of possible triangles](http://www.geeksforgeeks.org/find-number-of-triangles-possible/)
 
 BackTrack
 =========
