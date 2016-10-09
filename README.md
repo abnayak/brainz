@@ -71,6 +71,10 @@ String problems
 Two Pointers
 ============
 1. [Count the number of possible triangles](http://www.geeksforgeeks.org/find-number-of-triangles-possible/)
+2. [Biggest rectangle in a histogram](https://github.com/abnayak/brainz/blob/master/InterviewBit/TwoPointer/ContainerWithMostWater.java)
+
+Parenthesis Validation
+======================
 
 BackTrack
 =========
