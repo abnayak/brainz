@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * Created by abhijeet on 10/12/16.
  */
-public class Stack {
+public class MyStack {
     public static void main(String[] args) {
 
     }
@@ -16,24 +16,35 @@ public class Stack {
         Deque<Integer> min = new LinkedList<>();
 
         public void push(int x) {
-            if(x < min.peekLast()) {
-                min.add(x);
+            if(min.isEmpty()) {
+                min.addLast(x);
             } else {
-                min.add(min.peekLast());
+                if (x < min.peekLast()) {
+                    min.add(x);
+                } else {
+                    min.add(min.peekLast());
+                }
             }
             list.addLast(x);
         }
 
         public void pop() {
-            if(list)
+            if (list.isEmpty()) return;
+
+            list.removeLast();
+            min.removeLast();
         }
 
         public int top() {
+            if (list.isEmpty()) return -1;
 
+            return list.peekLast();
         }
 
         public int getMin() {
+            if (min.isEmpty()) return -1;
 
+            return min.peekLast();
         }
     }
 }

@@ -78,3 +78,8 @@ Parenthesis Validation
 
 BackTrack
 =========
+
+String and Integer conversion
+=============================
+String to int: Integer.parseInt("1");
+int to String: Integer.toString(1);
