@@ -9,9 +9,9 @@ import java.util.List;
  */
 public class CombinationSumIIV2 {
     public static void main(String[] args) {
-        int[] candidates = {10, 1, 2, 7, 6, 1, 5};
+        int[] candidates = {10, 1, 2, 7, 6, 1, 5,1,};
         Solution solution = new Solution();
-        List<List<Integer>> results = solution.combinationSum2(candidates, 8);
+        List<List<Integer>> results = solution.combinationSum2(candidates, 2);
         for (List<Integer> result : results) {
             for (Integer i : result) {
                 System.out.printf("%d ", i);
