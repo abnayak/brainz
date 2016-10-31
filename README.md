@@ -89,3 +89,11 @@ Problem Collection
 ==================
 https://leetcode.com/problems/combination-sum-ii/
 
+Find subsets of set with unique elements
+https://www.interviewbit.com/problems/subset/
+
+Find unique subsets with duplicates:
+https://www.interviewbit.com/problems/subsets-ii/
+
+Find all the permutations of a set
+https://www.interviewbit.com/problems/permutations/
