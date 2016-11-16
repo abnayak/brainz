@@ -98,3 +98,6 @@ https://www.interviewbit.com/problems/subsets-ii/
 
 Find all the permutations of a set
 https://www.interviewbit.com/problems/permutations/
+
+Find the largest continuous sequence in a array which sums to zero.
+https://www.interviewbit.com/problems/largest-continuous-sequence-zero-sum/
