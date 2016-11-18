@@ -35,7 +35,7 @@ public class TwoSum {
         System.out.println(result.get(0) + " " + result.get(1));
     }
 
-    public  class Solution {
+    public static class Solution {
         public ArrayList<Integer> twoSum(final List<Integer> a, int b) {
             ArrayList<Integer> list = new ArrayList<>();
             if (a == null || a.size() == 0) return list;
