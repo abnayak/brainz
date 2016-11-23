@@ -33,5 +33,4 @@ public class DiffKII {
             return 0;
         }
     }
-
 }
