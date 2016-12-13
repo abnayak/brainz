@@ -10,37 +10,27 @@ public class LongestConsecutiveSequence {
         Solution solution = new Solution();
         int[] array = {100, 4, 200, 1, 3, 2};
         List<Integer> list = new ArrayList<>();
-        for(int i : array) list.add(i);
+        for (int i : array) list.add(i);
         System.out.println(solution.longestConsecutive(list));
     }
 
     public static class Solution {
         public int longestConsecutive(final List<Integer> a) {
-            Hashtable<Integer, List<Integer>> map = new Hashtable<>();
+            Set<Integer> set = new HashSet<>();
             for (int i = 0; i < a.size(); i++) {
-                map.put(a.get(i), new ArrayList<>());
+                set.add(a.get(i));
             }
-            boolean run = true;
-            int index = 0;
-            while(run && index < map.size()) {
-                run = false;
-                Set<Integer> keySet = new HashSet<>(map.keySet());
-                for (Integer i : keySet) {
-                    if(map.containsKey(i+1)) {
-                        run = true;
-                        List<Integer> list = map.get(i);
-                        list.add(i+1);
-                        list.addAll(map.get(i+1));
-                        map.remove(i+1);
-                    }
+            int MAX = 0;
+            for (int i : a) {
+                // If there is not element smaller than this, that implies this is the
+                // start of the sequence.
+                if (!set.contains(i - 1)) {
+                    int count = 0;
+                    while (set.contains(i + count)) count++;
+                    MAX = Math.max(MAX, count);
                 }
             }
-            Set<Integer> keySet = map.keySet();
-            int max = 0;
-            for(Integer i : keySet) {
-                max = Math.max(max, map.get(i).size());
-            }
-            return max+1;
+            return MAX;
         }
     }
 }

@@ -78,7 +78,11 @@ Parenthesis Validation
 
 BackTrack
 =========
-https://www.interviewbit.com/problems/palindrome-partitioning/
+1. https://www.interviewbit.com/problems/palindrome-partitioning/
+
+Hashing
+=======
+1. [Find the length of the longest consecutive elements sequence in a given array](https://www.interviewbit.com/problems/longest-consecutive-sequence/)
 
 Integer conversions
 ===================
@@ -96,8 +100,12 @@ https://www.interviewbit.com/problems/subset/
 Find unique subsets with duplicates:
 https://www.interviewbit.com/problems/subsets-ii/
 
+Find unique permutations with duplicates:
+https://www.interviewbit.com/problems/all-unique-permutations/
+
 Find all the permutations of a set
 https://www.interviewbit.com/problems/permutations/
 
 Find the largest continuous sequence in a array which sums to zero.
 https://www.interviewbit.com/problems/largest-continuous-sequence-zero-sum/
+
