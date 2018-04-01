@@ -1,7 +1,5 @@
 package BitManipulation;
 
-import org.omg.PortableInterceptor.INACTIVE;
-
 /**
  * Created by abhijeet on 9/29/16.
  */

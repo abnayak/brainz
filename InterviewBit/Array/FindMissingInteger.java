@@ -1,8 +1,5 @@
 package Array;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-import sun.java2d.pipe.SolidTextRenderer;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;

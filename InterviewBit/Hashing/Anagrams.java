@@ -1,8 +1,5 @@
 package Hashing;
 
-import sun.util.resources.cldr.zh.CalendarData_zh_Hans_HK;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
