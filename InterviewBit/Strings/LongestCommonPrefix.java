@@ -9,28 +9,38 @@ import java.util.Arrays;
 public class LongestCommonPrefix {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        String[] strings = {"a", "abfghijk","abcefgh"};
+        String[] strings = {"abfghijk", "ab", "abcefgh"};
         System.out.println(solution.longestCommonPrefix(new ArrayList<String>(Arrays.asList(strings))));
     }
 
     public static class Solution {
         public String longestCommonPrefix(ArrayList<String> a) {
-            if(a.size() == 1) {
+            if (a.size() == 0) {
+                return "";
+            }
+
+            if (a.size() == 1) {
                 return a.get(0);
             }
 
-            int prefixMaxLen = a.get(0).length()-1;
-            String base = a.get(0);
+            int maxStringLength = Integer.MAX_VALUE;
+            for (String string : a) {
+                if (string.length() < maxStringLength) {
+                    maxStringLength = string.length();
+                }
+            }
 
-            for (int i=1; i < a.size(); i++) {
-                for(int j=0; j <= prefixMaxLen; j++) {
-                    if(j >= a.get(i).length() || a.get(i).charAt(j) != base.charAt(j) ) {
-                        prefixMaxLen = j-1;
+            int endIndex;
+            for (int i = 0; i < maxStringLength; i++) {
+                char ch = a.get(0).charAt(i);
+                for (int j = 1; j < a.size(); j++) {
+                    if (ch != a.get(j).charAt(i)) {
+                        return a.get(0).substring(0, i);
                     }
                 }
-
             }
-            return base.substring(0, prefixMaxLen+1);
+
+            return a.get(0).substring(0, maxStringLength);
         }
     }
 
