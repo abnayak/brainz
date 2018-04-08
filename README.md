@@ -12,7 +12,17 @@ Important Java methods and techniques to solve problems faster
     Arrays.fill(intArray,1);
     ```
 
-2. Convert an array to Linked list
+2. Convert an array to linked list
+    ```java
+    Integer[] arr = {1, 2, 3};
+    List<Integer> list = new ArrayList<Integer>(Arrays.asList(arr));
+    ```
+    Notice arr of Integer array not int array
+    
+3. Print an array
+    ```java
+    System.out.println(Arrays.asString(arr));
+    ```
 
 Must know data structure in java
 ================================
@@ -92,6 +102,7 @@ int to String: Integer.toString(1);
 
 Problem Collection
 ==================
+Find all unique combinations in an array where sum equals to a value
 https://leetcode.com/problems/combination-sum-ii/
 
 Find subsets of set with unique elements
@@ -108,4 +119,9 @@ https://www.interviewbit.com/problems/permutations/
 
 Find the largest continuous sequence in a array which sums to zero.
 https://www.interviewbit.com/problems/largest-continuous-sequence-zero-sum/
+
+Dynamic Problem collection
+
+Find Bitonic (first increasing then decreasing) subsequence in an Array
+https://www.geeksforgeeks.org/dynamic-programming-set-15-longest-bitonic-subsequence/
 
