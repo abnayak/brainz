@@ -9,7 +9,7 @@ import java.util.List;
 public class NQueen {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        List<List<String>> result = solution.solveNQueens(4);
+        List<List<String>> result = solution.solveNQueens(50);
         for (List<String> strs : result) {
             for (String s : strs) {
                 System.out.println(s);
@@ -48,7 +48,9 @@ public class NQueen {
 
             for (int i = 0; i < n; i++) {
                 board[row][i] = 'Q';
-                if (isValid(board, n, row, i)) solve(board, n, row + 1);
+                if (isValid(board, n, row, i)) {
+                    solve(board, n, row + 1);
+                }
                 board[row][i] = '.';
             }
         }

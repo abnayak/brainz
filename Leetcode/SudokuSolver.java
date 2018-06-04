@@ -45,7 +45,7 @@ public class SudokuSolver {
 
         private boolean solve(char[][] board) {
             // Search for a unsolved location
-            int[] unsolvedLocation = SearchForUnsolvedLocation(board);
+            int[] unsolvedLocation = searchForUnsolvedLocation(board);
 
             // If no empty location found then end the recursion.
             if (unsolvedLocation == null) return true;
@@ -61,7 +61,7 @@ public class SudokuSolver {
             return false;
         }
 
-        private int[] SearchForUnsolvedLocation(char[][] board) {
+        private int[] searchForUnsolvedLocation(char[][] board) {
             for (int i = 0; i < ROWS; i++) {
                 for (int j = 0; j < COLS; j++) {
                     if (board[i][j] == '.') return new int[]{i, j};

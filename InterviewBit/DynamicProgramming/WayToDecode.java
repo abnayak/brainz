@@ -35,7 +35,6 @@ public class WayToDecode {
             int n = 0;
             int m = 0;
 
-
             n = helper(A, index + 1);
 
             if (index + 1 < A.length()) {

@@ -5,32 +5,33 @@
 public class Sqrt {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.mySqrt(2147395599));
+        System.out.println(solution.mySqrt(6));
     }
 
     public static class Solution {
         public int mySqrt(int x) {
-            float low = 1;
-            float high = x;
-            while (true) {
-                float mid = (low + high) / 2;
-                float temp = x / mid;
+            if (x == 0 || x == 1) return x;
 
-//                if (mid - temp < 0) {
-//                    low = mid;
-//                } else if (mid - temp > 0.001) {
-//                    high = mid;
-//                } else {
-//                    return (int) mid;
-//                }
-                if((int) mid == (int) temp) {
-                    return (int)mid;
-                } else if((int) temp < (int) mid) {
-                    low = mid;
+            int start = 1;
+            int end = x;
+            int mid = (start + end) / 2;
+
+            while (start <= end) {
+                if (mid == x / mid) {
+                    return mid;
+                } else if (mid < x / mid) {
+                    start = mid + 1;
                 } else {
-                    high = mid;
+                    end = mid - 1;
                 }
+                mid = (start + end) / 2;
             }
+
+            return end;
         }
     }
 }
+
+
+ // 1 2 3 4 5 6
+//  0 1 2 3 4 5
